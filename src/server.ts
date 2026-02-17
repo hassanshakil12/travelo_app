@@ -2,7 +2,7 @@ import "colors";
 import express from "express";
 
 const app = express();
-const PORT: number = 5000;
+const PORT: number = 5000; // it's temporary, we will use env variable
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`.bgGreen.white.bold);
