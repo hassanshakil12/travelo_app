@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+import { env } from "./";
 
 const connectDB = async (): Promise<void> => {
   try {
-    const mongoURI = "mongodb://localhost:27017/travelo";
+    const mongoURI = env.MONGODB_URI;
 
     if (!mongoURI) {
       console.error("MONGO_URI is missing");
